@@ -5,6 +5,9 @@ jobspy.scrapers.exceptions
 This module contains the set of Scrapers' exceptions.
 """
 
+class CSIROException(Exception):
+    def __init__(self, message=None):
+        super().__init__(message or "An error occurred with CSIRO")
 
 class LinkedInException(Exception):
     def __init__(self, message=None):
